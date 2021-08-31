@@ -24,7 +24,7 @@ def recv_data():
     while True:
         data_recv = con.recv(1024)
         if data_recv != '':
-            label = Label(frame, text=data_recv, bg='blue', fg='white', borderwidth=2, relief='ridge')
+            label = Label(frame, text=data_recv.decode(), bg='blue', fg='white', borderwidth=2, relief='ridge')
             label.pack(fill=X, side=TOP)
 
 
